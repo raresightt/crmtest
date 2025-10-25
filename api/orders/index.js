@@ -16,14 +16,14 @@ module.exports = async (req, res) => {
     try {
         if (req.method === 'GET') {
             // Get all orders
-            const result = await sql`SELECT * FROM orders ORDER BY createdAt DESC`;
+            const result = await sql`SELECT id, marketplace, customername as "customerName", customeremail as "customerEmail", product, quantity, price, status, notes, createdat as "createdAt" FROM orders ORDER BY createdat DESC`;
             res.json(result.rows);
         } else if (req.method === 'POST') {
             // Add order
             const { id, marketplace, customerName, customerEmail, product, quantity, price, status, notes } = req.body;
             
             await sql`
-                INSERT INTO orders (id, marketplace, customerName, customerEmail, product, quantity, price, status, notes, createdAt)
+                INSERT INTO orders (id, marketplace, customername, customeremail, product, quantity, price, status, notes, createdat)
                 VALUES (${id}, ${marketplace}, ${customerName}, ${customerEmail}, ${product}, ${quantity}, ${price}, ${status}, ${notes || ''}, ${new Date().toISOString()})
             `;
             

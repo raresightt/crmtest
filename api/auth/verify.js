@@ -26,8 +26,8 @@ module.exports = async (req, res) => {
 
         const sessionResult = await sql`
             SELECT s.*, u.* FROM sessions s
-            JOIN users u ON s.userId = u.id
-            WHERE s.id = ${sessionId} AND s.expiresAt > ${new Date().toISOString()}
+            JOIN users u ON s.userid = u.id
+            WHERE s.id = ${sessionId} AND s.expiresat > ${new Date().toISOString()}
         `;
 
         if (sessionResult.rows.length === 0) {

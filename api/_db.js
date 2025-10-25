@@ -16,8 +16,8 @@ async function initializeDatabase() {
                 name TEXT NOT NULL,
                 email TEXT NOT NULL,
                 role TEXT NOT NULL,
-                lastLogin TEXT,
-                createdAt TEXT NOT NULL
+                lastlogin TEXT,
+                createdat TEXT NOT NULL
             )
         `;
 
@@ -26,14 +26,14 @@ async function initializeDatabase() {
             CREATE TABLE IF NOT EXISTS orders (
                 id TEXT PRIMARY KEY,
                 marketplace TEXT NOT NULL,
-                customerName TEXT NOT NULL,
-                customerEmail TEXT NOT NULL,
+                customername TEXT NOT NULL,
+                customeremail TEXT NOT NULL,
                 product TEXT NOT NULL,
                 quantity INTEGER NOT NULL,
                 price REAL NOT NULL,
                 status TEXT NOT NULL,
                 notes TEXT,
-                createdAt TEXT NOT NULL
+                createdat TEXT NOT NULL
             )
         `;
 
@@ -41,10 +41,10 @@ async function initializeDatabase() {
         await sql`
             CREATE TABLE IF NOT EXISTS sessions (
                 id TEXT PRIMARY KEY,
-                userId TEXT NOT NULL,
-                expiresAt TEXT NOT NULL,
-                rememberMe INTEGER NOT NULL,
-                createdAt TEXT NOT NULL
+                userid TEXT NOT NULL,
+                expiresat TEXT NOT NULL,
+                rememberme INTEGER NOT NULL,
+                createdat TEXT NOT NULL
             )
         `;
 

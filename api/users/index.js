@@ -18,7 +18,7 @@ module.exports = async (req, res) => {
         if (req.method === 'GET') {
             // Get all users
             const result = await sql`
-                SELECT id, username, name, email, role, lastLogin FROM users
+                SELECT id, username, name, email, role, lastlogin as "lastLogin" FROM users
             `;
             res.json(result.rows);
         } else if (req.method === 'POST') {
@@ -29,7 +29,7 @@ module.exports = async (req, res) => {
             const userId = `user_${Date.now()}`;
             
             await sql`
-                INSERT INTO users (id, username, password, name, email, role, createdAt)
+                INSERT INTO users (id, username, password, name, email, role, createdat)
                 VALUES (${userId}, ${username}, ${hashedPassword}, ${name}, ${email}, ${role}, ${new Date().toISOString()})
             `;
             

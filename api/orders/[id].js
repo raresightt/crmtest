@@ -22,8 +22,8 @@ module.exports = async (req, res) => {
             
             await sql`
                 UPDATE orders 
-                SET marketplace = ${marketplace}, customerName = ${customerName}, 
-                    customerEmail = ${customerEmail}, product = ${product}, 
+                SET marketplace = ${marketplace}, customername = ${customerName}, 
+                    customeremail = ${customerEmail}, product = ${product}, 
                     quantity = ${quantity}, price = ${price}, status = ${status}, notes = ${notes || ''}
                 WHERE id = ${id}
             `;

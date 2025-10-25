@@ -31,7 +31,7 @@ module.exports = async (req, res) => {
         // Update last login
         await sql`
             UPDATE users 
-            SET lastLogin = ${new Date().toISOString()} 
+            SET lastlogin = ${new Date().toISOString()} 
             WHERE id = ${user.id}
         `;
 
@@ -41,7 +41,7 @@ module.exports = async (req, res) => {
         expiresAt.setHours(expiresAt.getHours() + (rememberMe ? 720 : 1)); // 30 days or 1 hour
         
         await sql`
-            INSERT INTO sessions (id, userId, expiresAt, rememberMe, createdAt)
+            INSERT INTO sessions (id, userid, expiresat, rememberme, createdat)
             VALUES (
                 ${sessionId},
                 ${user.id},

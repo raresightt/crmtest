@@ -23,7 +23,7 @@ module.exports = async (req, res) => {
         // Insert orders one by one (PostgreSQL doesn't have the same transaction API as SQLite)
         for (const order of orders) {
             await sql`
-                INSERT INTO orders (id, marketplace, customerName, customerEmail, product, quantity, price, status, notes, createdAt)
+                INSERT INTO orders (id, marketplace, customername, customeremail, product, quantity, price, status, notes, createdat)
                 VALUES (
                     ${order.id},
                     ${order.marketplace},
