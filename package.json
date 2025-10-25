@@ -4,8 +4,7 @@
   "description": "Order CRM with backend database - Vercel deployment",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js",
-    "build": "echo 'Static site with serverless functions'"
+    "dev": "nodemon server.js"
   },
   "keywords": ["crm", "orders", "express", "vercel", "postgres"],
   "author": "",
