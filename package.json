@@ -2,11 +2,10 @@
   "name": "order-crm",
   "version": "1.0.0",
   "description": "Order CRM with backend database - Vercel deployment",
-  "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
-    "vercel-build": "echo 'Build complete'"
+    "build": "echo 'Static site with serverless functions'"
   },
   "keywords": ["crm", "orders", "express", "vercel", "postgres"],
   "author": "",
