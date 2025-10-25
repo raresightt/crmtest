@@ -1,0 +1,8 @@
+node_modules/
+npm-debug.log
+.DS_Store
+crm_database.db
+.env
+.env.local
+.vercel
+*.log

@@ -1,0 +1,105 @@
+╔════════════════════════════════════════════════════════════╗
+║          ORDER CRM - QUICK START GUIDE                    ║
+╚════════════════════════════════════════════════════════════╝
+
+📋 SETUP (First Time Only):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Install Node.js from: https://nodejs.org/
+   (Download LTS version)
+
+2. Open terminal in project folder and run:
+   npm install
+
+3. Done! You're ready to go.
+
+
+🚀 START SERVER:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+OPTION 1 (Windows):
+   Double-click: START_SERVER.bat
+
+OPTION 2 (Command Line):
+   npm start
+
+Server will start at: http://localhost:3000
+
+
+🔐 DEFAULT LOGIN:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Username: admin
+Password: admin123
+
+⚠️ IMPORTANT: Change this password after first login!
+
+
+📁 YOUR DATA:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+All data is stored in: crm_database.db
+
+This file contains:
+  ✓ All orders
+  ✓ All users
+  ✓ All sessions
+
+To backup: Just copy this file
+To restore: Replace this file with your backup
+
+
+🛠️ VIEW/EDIT DATABASE:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Use DB Browser for SQLite:
+https://sqlitebrowser.org/
+
+Open crm_database.db and you can:
+  • View all tables
+  • Edit data directly
+  • Run SQL queries
+  • Export data
+
+
+📊 FEATURES:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ Dashboard with statistics
+✓ Create/Edit/Delete orders
+✓ Import/Export CSV
+✓ User management (Admin only)
+✓ Filter and search orders
+✓ Dark theme interface
+✓ Mobile responsive
+
+
+🔧 COMMON ISSUES:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Problem: Port 3000 already in use
+Solution: Edit server.js, change PORT to 3001 or 8080
+
+Problem: Can't login
+Solution: Check if server is running at http://localhost:3000
+
+Problem: Database locked
+Solution: Close any programs viewing the database file
+
+
+📞 NEED HELP?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Check README.md for detailed documentation
+2. Check SETUP_INSTRUCTIONS.md for setup help
+3. Look at console for error messages
+
+
+═══════════════════════════════════════════════════════════════
+
+That's it! You're ready to manage your orders professionally.
+
+Start the server and go to: http://localhost:3000
+
+═══════════════════════════════════════════════════════════════
+

@@ -1,0 +1,9 @@
+node_modules
+npm-debug.log
+.DS_Store
+crm_database.db
+START_SERVER.bat
+SETUP_INSTRUCTIONS.md
+QUICK_START.txt
+server.js
+
